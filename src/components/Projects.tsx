@@ -1,6 +1,6 @@
-
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -84,9 +84,11 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-full">
-            View All Projects
-          </Button>
+          <Link to="/projects">
+            <Button variant="outline" size="lg" className="border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-full">
+              View All Projects
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
