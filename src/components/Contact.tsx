@@ -8,17 +8,17 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA"
+    value: "Fourways, Sandton"
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567"
+    value: "--- --- ---- "
   },
   {
     icon: Mail,
     label: "Email",
-    value: "alex@example.com"
+    value: "mafumq@gmail.com"
   }
 ];
 

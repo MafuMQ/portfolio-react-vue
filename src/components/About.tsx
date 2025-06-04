@@ -3,8 +3,8 @@ import { Download, Coffee, Heart, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { icon: Coffee, label: "Projects Completed", value: "50+" },
-  { icon: Users, label: "Happy Clients", value: "30+" },
+  { icon: Coffee, label: "Projects Completed", value: "25+" },
+  { icon: Users, label: "Happy Clients", value: "10+" },
   { icon: Heart, label: "Years Experience", value: "5+" },
 ];
 
@@ -16,7 +16,7 @@ const About = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
+                src="https://images.unsprglash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=facrhbewe"
                 alt="Alex Johnson"
                 className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
               />
@@ -27,13 +27,12 @@ const About = () => {
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">About Me</h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              I'm a passionate full-stack developer with over 5 years of experience creating digital solutions 
-              that make a difference. My journey started with a curiosity about how things work, and it has 
-              evolved into a love for building beautiful, functional web applications.
+              I'm a full stack web developer and software engineer with a passion for creating
+              beautiful and functional web applications with over 5 years of experience.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-              projects, or sharing my knowledge through blog posts and mentoring. I believe in the power of 
+              When I'm not coding, you can find me exploring new technologies, creating new open-source 
+              projects, or sharing my knowledge through mentoring. I believe in the power of 
               technology to solve real-world problems and improve people's lives.
             </p>
             

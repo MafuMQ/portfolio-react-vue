@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Alex Johnson
+              Mafu Q. Mbangeni
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Full Stack Developer passionate about creating beautiful, functional web experiences 
+              Full Stack Web Developer, and Software Engineer passionate about creating beautiful, functional web experiences 
               that make a difference in people's lives.
             </p>
           </div>
@@ -44,7 +44,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center">
-            Made with <Heart className="mx-2 text-red-500" size={16} /> by Alex Johnson © 2024
+            Made with <Heart className="mx-2 text-red-500" size={16} /> by Mafu Qhama Mbangeni © 2025
           </p>
         </div>
       </div>

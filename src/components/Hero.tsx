@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -19,34 +18,45 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Alex Johnson
+              Mafu Q. Mbangeni
             </span>
           </h1>
           <div className="text-xl md:text-2xl text-gray-300 mb-8 h-8">
-            <span className="typing-animation">Full Stack Developer & UI/UX Designer</span>
+            <span className="typing-animation">Full Stack Developer, UI/UX Designer & Software Developer</span>
           </div>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            I craft beautiful, functional web experiences that bridge the gap between design and technology. 
-            Passionate about creating solutions that make a difference.
+            I build websites and applications that are not only functional but also visually stunning.
+            With a passion for clean code and user-centric design, I strive to create remarkable digital experiences.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
-              View My Work
-            </Button>
-            <Button variant="outline" size="lg" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full transition-all duration-300">
-              Get In Touch
-            </Button>
+            <a href="#projects">
+              <Button
+                size="lg"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+              >
+                View My Work
+              </Button>
+            </a>
+            <a href="#contact">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full transition-all duration-300"
+              >
+                Get In Touch
+              </Button>
+            </a>
           </div>
           
           <div className="flex justify-center space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
+            <a href="https://github.com/MafuMQ" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
               <Github size={24} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
+            <a href="https://www.linkedin.com/in/mafu-mbangeni-12186b229/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
               <Linkedin size={24} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
+            <a href="mailto:mafumq@gmail.com" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
               <Mail size={24} />
             </a>
           </div>

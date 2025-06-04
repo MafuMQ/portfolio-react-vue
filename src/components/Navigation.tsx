@@ -19,7 +19,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Alex Johnson
+            Mafu Q. Mbangeni
           </div>
           
           {/* Desktop Menu */}
@@ -33,9 +33,6 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full">
-              Hire Me
-            </Button>
           </div>
           
           {/* Mobile Menu Button */}
@@ -61,9 +58,6 @@ const Navigation = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full w-fit">
-                Hire Me
-              </Button>
             </div>
           </div>
         )}

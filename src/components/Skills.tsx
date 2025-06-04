@@ -3,33 +3,33 @@ import { Code2, Palette, Smartphone, Database, Globe, Zap } from "lucide-react";
 
 const skills = [
   {
-    icon: Code2,
+    icon: Globe,
     title: "Frontend Development",
-    description: "React, Vue, TypeScript, Tailwind CSS",
+    description: "React, TypeScript, Tailwind CSS",
     color: "from-blue-500 to-cyan-500"
   },
   {
     icon: Database,
-    title: "Backend Development",
-    description: "Node.js, Python, PostgreSQL, MongoDB",
+    title: "Backend & Web Development",
+    description: "Node.js, Python, PostgreSQL, REST APIs",
     color: "from-green-500 to-emerald-500"
   },
   {
     icon: Palette,
     title: "UI/UX Design",
-    description: "Figma, Adobe XD, Prototyping, User Research",
+    description: "Figma, Adobe Cloud, Prototyping, User Research",
     color: "from-purple-500 to-pink-500"
   },
   {
     icon: Smartphone,
     title: "Mobile Development",
-    description: "React Native, Flutter, iOS, Android",
+    description: "React Native, iOS, Android",
     color: "from-orange-500 to-red-500"
   },
   {
-    icon: Globe,
-    title: "Web Technologies",
-    description: "HTML5, CSS3, JavaScript, REST APIs",
+    icon: Code2,
+    title: "Software Engineering",
+    description: "C++, Qt, Java, Algorithms, MATLAB",
     color: "from-teal-500 to-blue-500"
   },
   {
