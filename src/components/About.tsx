@@ -1,4 +1,4 @@
-
+import profileImage from "../media/profile.jpg";
 import { Download, Coffee, Heart, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -16,8 +16,8 @@ const About = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://images.unsprglash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=facrhbewe"
-                alt="Alex Johnson"
+                src={profileImage}
+                alt="Mafu Mbangeni"
                 className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
               />
             </div>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ArrowLeft, Search, Filter, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,73 +14,130 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
+// Project images
+const images = {
+  LP: new URL("../media/p_LP.jpg", import.meta.url).href,
+  roi: new URL("../media/p_roi.jpg", import.meta.url).href,
+  opencv2pics: new URL("../media/p_opencv2pics.jpg", import.meta.url).href,
+  pythonChatApp: new URL("../media/p_ex1-python-chat-app.jpg", import.meta.url).href,
+  jsChatApp: new URL("../media/p_ex1-js-chat-app.jpg", import.meta.url).href,
+  tic_tac_toe: new URL("../media/p_tic-tac-toe.png", import.meta.url).href,
+  label: new URL("../media/p_label.jpg", import.meta.url).href,
+  apparel: new URL("../media/p_apparel.png", import.meta.url).href,
+  art: new URL("../media/p_art.jpg", import.meta.url).href
+} as const;
+
 const allProjects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    category: "Full Stack",
+    title: "Profit Optimization Platform",
+    description: "A platform for businesses to optimize for profitability, using linear programming to discover the best combination of products to sell to maximize profit, given a set of constraints.",
+    image: images.LP,
+    tags: ["Flask", "AI", "Linear Programming"],
+    category: "AI/ML",
     year: "2024",
-    github: "#",
-    demo: "#"
+    github: "https://github.com/MafuMQ/ex2-LO",
+    demo: "https://ex2-lo.vercel.app/"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-    tags: ["Vue.js", "Firebase", "Vuex", "CSS3"],
-    category: "Frontend",
+    title: "Return on Investment/Break-Even Calculator",
+    description: "A web application that calculates the break-even point for various business scenarios, helping entrepreneurs make informed financial decisions.",
+    image: images.roi,
+    tags: ["Flask", "Numpy"],
+    category: "Full Stack",
     year: "2024",
-    github: "#",
-    demo: "#"
+    github: "https://github.com/MafuMQ/breakeven-py-web",
+    demo: "https://breakeven-py-web.vercel.app/"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "A responsive weather application with location-based forecasts, interactive maps, and beautiful data visualizations.",
-    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
-    tags: ["TypeScript", "API Integration", "Charts.js", "PWA"],
-    category: "Frontend",
+    title: "Facial Recognition",
+    description: "A web application that uses facial recognition technology to compare 2 images and determine if they are of the same person, leveraging advanced machine learning algorithms.",
+    image: images.opencv2pics,
+    tags: ["OpenCV", "Python"],
+    category: "AI/ML",
     year: "2023",
-    github: "#",
-    demo: "#"
+    github: "https://github.com/MafuMQ/Facial-Recognition",
+    demo: "https://github.com/MafuMQ/Facial-Recognition"
   },
   {
     id: 4,
-    title: "Social Media Analytics",
-    description: "Analytics dashboard for social media insights with real-time data processing and beautiful visualizations.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-    tags: ["React", "D3.js", "Python", "PostgreSQL"],
+    title: "React Chat App with Authentication",
+    description: "A full stack chat application built with React, Node.js, Next.js, and Firebase, featuring user authentication, real-time messaging, and a modern UI.",
+    image: images.jsChatApp,
+    tags: ["React", "Node.js", "Next.js", "Firebase"],
     category: "Full Stack",
-    year: "2023",
-    github: "#",
-    demo: "#"
+    year: "2025",
+    github: "https://github.com/MafuMQ/ex1-JSChatApp",
+    demo: "https://ex1-js-chat-app.vercel.app/"
   },
   {
     id: 5,
-    title: "Mobile Banking App",
-    description: "Secure mobile banking application with biometric authentication and real-time transaction processing.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=300&fit=crop",
-    tags: ["React Native", "Node.js", "MongoDB", "Security"],
-    category: "Mobile",
+    title: "Facial Detection",
+    description: "A web application that detects faces in images using OpenCV and Python, providing real-time facial detection and recognition capabilities.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
+    tags: ["Python", "OpenCV", "AI"],
+    category: "AI/ML",
     year: "2023",
-    github: "#",
-    demo: "#"
+    github: "https://github.com/MafuMQ/Facial-Detection",
+    demo: "https://facial-detection-ecru.vercel.app/"
   },
   {
-    id: 6,
-    title: "AI Chatbot Platform",
-    description: "Intelligent chatbot platform with natural language processing and machine learning capabilities.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
-    tags: ["Python", "TensorFlow", "FastAPI", "React"],
-    category: "AI/ML",
-    year: "2024",
-    github: "#",
-    demo: "#"
-  }
+  id: 6,
+  title: "Group Chat App",
+  description: "A group chat app that uses restful APIs to allow users to create chat rooms, send messages, and manage user accounts, built with Python.",
+  image: images.pythonChatApp,
+  tags: ["Python", "Flask", "RESTful API"],
+  category: "Full Stack",
+  year: "2023",
+  github: "https://github.com/MafuMQ/ex1-PythonChatApp",
+  demo: "https://ex1-python-chat-app.vercel.app/"
+},
+{
+id: 7,
+title: "Tic-Tac-Toe",
+description: "A classic tic-tac-toe game built with HTML, CSS, and JavaScript, featuring a clean UI and responsive design. Play with a friend.",
+image: images.tic_tac_toe,
+tags: ["Javascript", "HTML", "CSS"],
+category: "Full Stack",
+year: "2023",
+github: "https://github.com/MafuMQ/Tic-Tac-Toe",
+demo: "https://tic-tac-toe-sigma-orcin-21.vercel.app/"
+},
+{
+id: 8,
+title: "Label Creation & Visualizations",
+description: "Created Logo and it's visualization as a label for various products.",
+image: images.label,
+tags: [],
+category: "Graphic Design",
+year: "2023",
+github: "",
+demo: "https://mafumbangeni.blogspot.com/2024/07/label-visualizations.html"
+},
+{
+id: 9,
+title: "Apparel Visualizations",
+description: "Visualizations based on logo for apparel products, showcasing the logo in various styles and contexts.",
+image: images.apparel,
+tags: [],
+category: "Graphic Design",
+year: "2023",
+github: "",
+demo: "https://mafumbangeni.blogspot.com/2024/07/apparel-visualizations-based-on-logo.html"
+},
+{
+id: 10,
+title: "Graphical Art",
+description: "A collection of graphical art pieces created using various design tools, showcasing creativity and design skills.",
+image: images.art,
+tags: [],
+category: "Graphic Design",
+year: "2023",
+github: "",
+demo: "https://yonkerface.wixsite.com/main"
+}
 ];
 
 const categories = ["All", "Full Stack", "Frontend", "Mobile", "AI/ML"];
@@ -185,14 +241,18 @@ const AllProjects = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <Button size="sm" variant="outline" className="bg-white text-black hover:bg-gray-100">
-                      <Github size={16} className="mr-2" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-purple-600 hover:bg-purple-700">
-                      <ExternalLink size={16} className="mr-2" />
-                      Demo
-                    </Button>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Button size="sm" variant="outline" className="bg-white text-black hover:bg-gray-300">
+                        <Github size={16} className="mr-2" />
+                        Code
+                      </Button>
+                    </a>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <Button size="sm" className="bg-purple-600 hover:bg-purple-700">
+                        <ExternalLink size={16} className="mr-2" />
+                        Demo
+                      </Button>
+                    </a>
                   </div>
                   <div className="absolute top-4 right-4">
                     <span className="bg-white/90 text-gray-800 px-2 py-1 rounded-full text-xs font-medium">
