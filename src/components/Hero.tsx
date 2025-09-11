@@ -53,7 +53,7 @@ const Hero = () => {
             <a href="https://github.com/MafuMQ" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
               <Github size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/mafu-mbangeni-12186b229/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
+            <a href="https://www.linkedin.com/in/mafu-qhama-mbangeni/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
               <Linkedin size={24} />
             </a>
             <a href="mailto:mafumq@gmail.com" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform">
