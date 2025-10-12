@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, Search, Filter, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,7 +16,10 @@ import {
 
 // Project images
 const images = {
+  cyberQuest: new URL("../media/p_cyberQuest.jpg", import.meta.url).href,
   LP: new URL("../media/p_LP.jpg", import.meta.url).href,
+  solarBE: new URL("../media/p_solarBE.jpg", import.meta.url).href,
+  foodDonation: new URL("../media/p_foodDonation.jpg", import.meta.url).href,
   roi: new URL("../media/p_roi.jpg", import.meta.url).href,
   opencv2pics: new URL("../media/p_opencv2pics.jpg", import.meta.url).href,
   pythonChatApp: new URL("../media/p_ex1-python-chat-app.jpg", import.meta.url).href,
@@ -28,19 +31,52 @@ const images = {
 } as const;
 
 const allProjects = [
-  {
+    {
     id: 1,
+    title: "Cyber Quest",
+    description: "A team project about educating children about basic cyber security, and how to stay safe online.",
+    image: images.cyberQuest,
+    tags: ["React", "Node.js", "Firebase"],
+    category: "Full Stack",
+    year: "2025",
+    github: "https://github.com/Cwengii/GK-AH-CwengzStars",
+    demo: "https://gk-ah-cwengz-stars.vercel.app/"
+  },
+  {
+    id: 2,
     title: "Profit Optimization Platform",
     description: "A platform for businesses to optimize for profitability, using linear programming to discover the best combination of products to sell to maximize profit, given a set of constraints.",
     image: images.LP,
     tags: ["Flask", "AI", "Linear Programming"],
     category: "AI/ML",
-    year: "2024",
+    year: "2025",
     github: "https://github.com/MafuMQ/ex2-LO",
     demo: "https://ex2-lo.vercel.app/"
   },
+    {
+    id: 3,
+    title: "Solar Break-Even Calculator",
+    description: "Calculates the break-even point for solar panel installations, helping homeowners and businesses make informed decisions about investing in solar energy.",
+    image: images.solarBE,
+    tags: ["Flask", "Numpy"],
+    category: "Full Stack",
+    year: "2025",
+    github: "https://github.com/MafuMQ/solar-break-even",
+    demo: "https://solar-break-even.vercel.app/"
+  },
+    {
+    id: 4,
+    title: "Food Donation Platform",
+    description: "A platform for businesses to donate excess food to local charities, helping to reduce food waste and support those in need.",
+    image: images.foodDonation,
+    tags: ["Flask", "AI", "Linear Programming"],
+    category: "AI/ML",
+    year: "2024",
+    github: "https://github.com/MafuMQ/parcel-donation",
+    demo: "https://mafuqhama.pythonanywhere.com/"
+  },
   {
-    id: 2,
+    id: 5,
     title: "Return on Investment/Break-Even Calculator",
     description: "A web application that calculates the break-even point for various business scenarios, helping entrepreneurs make informed financial decisions.",
     image: images.roi,
@@ -51,7 +87,7 @@ const allProjects = [
     demo: "https://breakeven-py-web.vercel.app/"
   },
   {
-    id: 3,
+    id: 6,
     title: "Facial Recognition",
     description: "A web application that uses facial recognition technology to compare 2 images and determine if they are of the same person, leveraging advanced machine learning algorithms.",
     image: images.opencv2pics,
@@ -62,7 +98,7 @@ const allProjects = [
     demo: "https://github.com/MafuMQ/Facial-Recognition"
   },
   {
-    id: 4,
+    id: 7,
     title: "React Chat App with Authentication",
     description: "A full stack chat application built with React, Node.js, Next.js, and Firebase, featuring user authentication, real-time messaging, and a modern UI.",
     image: images.jsChatApp,
@@ -73,7 +109,7 @@ const allProjects = [
     demo: "https://ex1-js-chat-app.vercel.app/"
   },
   {
-    id: 5,
+    id: 8,
     title: "Facial Detection",
     description: "A web application that detects faces in images using OpenCV and Python, providing real-time facial detection and recognition capabilities.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
@@ -84,60 +120,60 @@ const allProjects = [
     demo: "https://facial-detection-ecru.vercel.app/"
   },
   {
-  id: 6,
-  title: "Group Chat App",
-  description: "A group chat app that uses restful APIs to allow users to create chat rooms, send messages, and manage user accounts, built with Python.",
-  image: images.pythonChatApp,
-  tags: ["Python", "Flask", "RESTful API"],
-  category: "Full Stack",
-  year: "2023",
-  github: "https://github.com/MafuMQ/ex1-PythonChatApp",
-  demo: "https://ex1-python-chat-app.vercel.app/"
-},
-{
-id: 7,
-title: "Tic-Tac-Toe",
-description: "A classic tic-tac-toe game built with HTML, CSS, and JavaScript, featuring a clean UI and responsive design. Play with a friend.",
-image: images.tic_tac_toe,
-tags: ["Javascript", "HTML", "CSS"],
-category: "Full Stack",
-year: "2023",
-github: "https://github.com/MafuMQ/Tic-Tac-Toe",
-demo: "https://tic-tac-toe-sigma-orcin-21.vercel.app/"
-},
-{
-id: 8,
-title: "Label Creation & Visualizations",
-description: "Created Logo and it's visualization as a label for various products.",
-image: images.label,
-tags: [],
-category: "Graphic Design",
-year: "2023",
-github: "",
-demo: "https://mafumbangeni.blogspot.com/2024/07/label-visualizations.html"
-},
-{
-id: 9,
-title: "Apparel Visualizations",
-description: "Visualizations based on logo for apparel products, showcasing the logo in various styles and contexts.",
-image: images.apparel,
-tags: [],
-category: "Graphic Design",
-year: "2023",
-github: "",
-demo: "https://mafumbangeni.blogspot.com/2024/07/apparel-visualizations-based-on-logo.html"
-},
-{
-id: 10,
-title: "Graphical Art",
-description: "A collection of graphical art pieces created using various design tools, showcasing creativity and design skills.",
-image: images.art,
-tags: [],
-category: "Graphic Design",
-year: "2023",
-github: "",
-demo: "https://yonkerface.wixsite.com/main"
-}
+    id: 9,
+    title: "Group Chat App",
+    description: "A group chat app that uses restful APIs to allow users to create chat rooms, send messages, and manage user accounts, built with Python.",
+    image: images.pythonChatApp,
+    tags: ["Python", "Flask", "RESTful API"],
+    category: "Full Stack",
+    year: "2023",
+    github: "https://github.com/MafuMQ/ex1-PythonChatApp",
+    demo: "https://ex1-python-chat-app.vercel.app/"
+  },
+  {
+    id: 10,
+    title: "Tic-Tac-Toe",
+    description: "A classic tic-tac-toe game built with HTML, CSS, and JavaScript, featuring a clean UI and responsive design. Play with a friend.",
+    image: images.tic_tac_toe,
+    tags: ["Javascript", "HTML", "CSS"],
+    category: "Full Stack",
+    year: "2023",
+    github: "https://github.com/MafuMQ/Tic-Tac-Toe",
+    demo: "https://tic-tac-toe-sigma-orcin-21.vercel.app/"
+  },
+  {
+    id: 11,
+    title: "Label Creation & Visualizations",
+    description: "Created Logo and it's visualization as a label for various products.",
+    image: images.label,
+    tags: [],
+    category: "Graphic Design",
+    year: "2023",
+    github: "",
+    demo: "https://mafumbangeni.blogspot.com/2024/07/label-visualizations.html"
+  },
+  {
+    id: 12,
+    title: "Apparel Visualizations",
+    description: "Visualizations based on logo for apparel products, showcasing the logo in various styles and contexts.",
+    image: images.apparel,
+    tags: [],
+    category: "Graphic Design",
+    year: "2023",
+    github: "",
+    demo: "https://mafumbangeni.blogspot.com/2024/07/apparel-visualizations-based-on-logo.html"
+  },
+  {
+    id: 13,
+    title: "Graphical Art",
+    description: "A collection of graphical art pieces created using various design tools, showcasing creativity and design skills.",
+    image: images.art,
+    tags: [],
+    category: "Graphic Design",
+    year: "2023",
+    github: "",
+    demo: "https://yonkerface.wixsite.com/main"
+  }
 ];
 
 const categories = ["All", "Full Stack", "Frontend", "Mobile", "AI/ML"];
@@ -147,6 +183,10 @@ const AllProjects = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const filteredProjects = allProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

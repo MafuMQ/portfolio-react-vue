@@ -3,44 +3,44 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const images = {
+  cyberQuest: new URL("../media/p_cyberQuest.jpg", import.meta.url).href,
   LP: new URL("../media/p_LP.jpg", import.meta.url).href,
-  roi: new URL("../media/p_roi.jpg", import.meta.url).href,
-  opencv2pics: new URL("../media/p_opencv2pics.jpg", import.meta.url).href,
-}
+  solarBE: new URL("../media/p_solarBE.jpg", import.meta.url).href,
+} as const;
 
 const projects = [
-  {
+    {
     id: 1,
+    title: "Cyber Quest",
+    description: "A team project about educating children about basic cyber security, and how to stay safe online.",
+    image: images.cyberQuest,
+    tags: ["React", "Node.js", "Firebase"],
+    category: "Full Stack",
+    year: "2025",
+    github: "https://github.com/Cwengii/GK-AH-CwengzStars",
+    demo: "https://gk-ah-cwengz-stars.vercel.app/"
+  },
+  {
+    id: 2,
     title: "Profit Optimization Platform",
     description: "A platform for businesses to optimize for profitability, using linear programming to discover the best combination of products to sell to maximize profit, given a set of constraints.",
     image: images.LP,
     tags: ["Flask", "AI", "Linear Programming"],
     category: "AI/ML",
-    year: "2024",
+    year: "2025",
     github: "https://github.com/MafuMQ/ex2-LO",
     demo: "https://ex2-lo.vercel.app/"
   },
-  {
-    id: 2,
-    title: "Return on Investment/Break-Even Calculator",
-    description: "A web application that calculates the break-even point for various business scenarios, helping entrepreneurs make informed financial decisions.",
-    image: images.roi,
+    {
+    id: 3,
+    title: "Solar Break-Even Calculator",
+    description: "Calculates the break-even point for solar panel installations, helping homeowners and businesses make informed decisions about investing in solar energy.",
+    image: images.solarBE,
     tags: ["Flask", "Numpy"],
     category: "Full Stack",
-    year: "2024",
-    github: "https://github.com/MafuMQ/breakeven-py-web",
-    demo: "https://breakeven-py-web.vercel.app/"
-  },
-  {
-    id: 3,
-    title: "Facial Recognition",
-    description: "A web application that uses facial recognition technology to compare 2 images and determine if they are of the same person, leveraging advanced machine learning algorithms.",
-    image: images.opencv2pics,
-    tags: ["OpenCV", "Python"],
-    category: "AI/ML",
-    year: "2023",
-    github: "https://github.com/MafuMQ/Facial-Recognition",
-    demo: "https://github.com/MafuMQ/Facial-Recognition"
+    year: "2025",
+    github: "https://github.com/MafuMQ/solar-break-even",
+    demo: "https://solar-break-even.vercel.app/"
   },
 ];
 
