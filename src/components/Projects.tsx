@@ -6,11 +6,23 @@ const images = {
   cyberQuest: new URL("../media/p_cyberQuest.jpg", import.meta.url).href,
   LP: new URL("../media/p_LP.jpg", import.meta.url).href,
   solarBE: new URL("../media/p_solarBE.jpg", import.meta.url).href,
+  instaGoods: new URL("../media/p_instaGoods.jpg", import.meta.url).href,
 } as const;
 
 const projects = [
-    {
+  {
     id: 1,
+    title: "InstaGoods",
+    description: "A platform for buying and selling goods locally, with a focus on community support and discovering local businesses, products and services.",
+    image: images.instaGoods,
+    tags: ["React", "Node.js", "Supabase", "SQL"],
+    category: "Full Stack",
+    year: "2025",
+    github: "https://github.com/MafuMQ/InstaGoods",
+    demo: "https://insta-goods.vercel.app/"
+  },
+  {
+    id: 2,
     title: "Cyber Quest",
     description: "A team project about educating children about basic cyber security, and how to stay safe online.",
     image: images.cyberQuest,
@@ -21,7 +33,7 @@ const projects = [
     demo: "https://gk-ah-cwengz-stars.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Profit Optimization Platform",
     description: "A platform for businesses to optimize for profitability, using linear programming to discover the best combination of products to sell to maximize profit, given a set of constraints.",
     image: images.LP,
@@ -31,17 +43,17 @@ const projects = [
     github: "https://github.com/MafuMQ/ex2-LO",
     demo: "https://ex2-lo.vercel.app/"
   },
-    {
-    id: 3,
-    title: "Solar Break-Even Calculator",
-    description: "Calculates the break-even point for solar panel installations, helping homeowners and businesses make informed decisions about investing in solar energy.",
-    image: images.solarBE,
-    tags: ["Flask", "Numpy"],
-    category: "Full Stack",
-    year: "2025",
-    github: "https://github.com/MafuMQ/solar-break-even",
-    demo: "https://solar-break-even.vercel.app/"
-  },
+  // {
+  //   id: 4,
+  //   title: "Solar Break-Even Calculator",
+  //   description: "Calculates the break-even point for solar panel installations, helping homeowners and businesses make informed decisions about investing in solar energy.",
+  //   image: images.solarBE,
+  //   tags: ["Flask", "Numpy"],
+  //   category: "Full Stack",
+  //   year: "2025",
+  //   github: "https://github.com/MafuMQ/solar-break-even",
+  //   demo: "https://solar-break-even.vercel.app/"
+  // },
 ];
 
 const Projects = () => {

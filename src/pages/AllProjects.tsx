@@ -16,6 +16,7 @@ import {
 
 // Project images
 const images = {
+  instaGoods: new URL("../media/p_instaGoods.jpg", import.meta.url).href,
   cyberQuest: new URL("../media/p_cyberQuest.jpg", import.meta.url).href,
   LP: new URL("../media/p_LP.jpg", import.meta.url).href,
   solarBE: new URL("../media/p_solarBE.jpg", import.meta.url).href,
@@ -33,6 +34,17 @@ const images = {
 const allProjects = [
     {
     id: 1,
+    title: "InstaGoods",
+    description: "A platform for buying and selling goods locally, with a focus on community support and discovering local businesses, products and services.",
+    image: images.instaGoods,
+    tags: ["React", "Node.js", "Supabase", "SQL"],
+    category: "Full Stack",
+    year: "2025",
+    github: "https://github.com/MafuMQ/InstaGoods",
+    demo: "https://insta-goods.vercel.app/"
+    },
+    {
+    id: 2,
     title: "Cyber Quest",
     description: "A team project about educating children about basic cyber security, and how to stay safe online.",
     image: images.cyberQuest,
@@ -43,7 +55,7 @@ const allProjects = [
     demo: "https://gk-ah-cwengz-stars.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Profit Optimization Platform",
     description: "A platform for businesses to optimize for profitability, using linear programming to discover the best combination of products to sell to maximize profit, given a set of constraints.",
     image: images.LP,
@@ -54,7 +66,7 @@ const allProjects = [
     demo: "https://ex2-lo.vercel.app/"
   },
     {
-    id: 3,
+    id: 4,
     title: "Solar Break-Even Calculator",
     description: "Calculates the break-even point for solar panel installations, helping homeowners and businesses make informed decisions about investing in solar energy.",
     image: images.solarBE,
@@ -65,7 +77,7 @@ const allProjects = [
     demo: "https://solar-break-even.vercel.app/"
   },
     {
-    id: 4,
+    id: 5,
     title: "Food Donation Platform",
     description: "A platform for businesses to donate excess food to local charities, helping to reduce food waste and support those in need.",
     image: images.foodDonation,
@@ -76,7 +88,7 @@ const allProjects = [
     demo: "https://mafuqhama.pythonanywhere.com/"
   },
   {
-    id: 5,
+    id: 6,
     title: "Return on Investment/Break-Even Calculator",
     description: "A web application that calculates the break-even point for various business scenarios, helping entrepreneurs make informed financial decisions.",
     image: images.roi,
@@ -87,7 +99,7 @@ const allProjects = [
     demo: "https://breakeven-py-web.vercel.app/"
   },
   {
-    id: 6,
+    id: 7,
     title: "Facial Recognition",
     description: "A web application that uses facial recognition technology to compare 2 images and determine if they are of the same person, leveraging advanced machine learning algorithms.",
     image: images.opencv2pics,
@@ -98,7 +110,7 @@ const allProjects = [
     demo: "https://github.com/MafuMQ/Facial-Recognition"
   },
   {
-    id: 7,
+    id: 8,
     title: "React Chat App with Authentication",
     description: "A full stack chat application built with React, Node.js, Next.js, and Firebase, featuring user authentication, real-time messaging, and a modern UI.",
     image: images.jsChatApp,
@@ -109,7 +121,7 @@ const allProjects = [
     demo: "https://ex1-js-chat-app.vercel.app/"
   },
   {
-    id: 8,
+    id: 9,
     title: "Facial Detection",
     description: "A web application that detects faces in images using OpenCV and Python, providing real-time facial detection and recognition capabilities.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
@@ -120,7 +132,7 @@ const allProjects = [
     demo: "https://facial-detection-ecru.vercel.app/"
   },
   {
-    id: 9,
+    id: 10,
     title: "Group Chat App",
     description: "A group chat app that uses restful APIs to allow users to create chat rooms, send messages, and manage user accounts, built with Python.",
     image: images.pythonChatApp,
@@ -131,7 +143,7 @@ const allProjects = [
     demo: "https://ex1-python-chat-app.vercel.app/"
   },
   {
-    id: 10,
+    id: 11,
     title: "Tic-Tac-Toe",
     description: "A classic tic-tac-toe game built with HTML, CSS, and JavaScript, featuring a clean UI and responsive design. Play with a friend.",
     image: images.tic_tac_toe,
@@ -142,7 +154,7 @@ const allProjects = [
     demo: "https://tic-tac-toe-sigma-orcin-21.vercel.app/"
   },
   {
-    id: 11,
+    id: 12,
     title: "Label Creation & Visualizations",
     description: "Created Logo and it's visualization as a label for various products.",
     image: images.label,
@@ -153,7 +165,7 @@ const allProjects = [
     demo: "https://mafumbangeni.blogspot.com/2024/07/label-visualizations.html"
   },
   {
-    id: 12,
+    id: 13,
     title: "Apparel Visualizations",
     description: "Visualizations based on logo for apparel products, showcasing the logo in various styles and contexts.",
     image: images.apparel,
@@ -164,7 +176,7 @@ const allProjects = [
     demo: "https://mafumbangeni.blogspot.com/2024/07/apparel-visualizations-based-on-logo.html"
   },
   {
-    id: 13,
+    id: 14,
     title: "Graphical Art",
     description: "A collection of graphical art pieces created using various design tools, showcasing creativity and design skills.",
     image: images.art,
