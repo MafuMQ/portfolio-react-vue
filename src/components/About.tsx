@@ -48,9 +48,11 @@ const About = () => {
               ))}
             </div>
             
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full">
-              <Download size={20} className="mr-2" />
-              Download Resume
+            <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full">
+              <a href="https://drive.google.com/file/d/1g0r1k8uR4Cb58ut1Ipvor8jRRFVl4aF5/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Download size={20} className="mr-2" />
+                Download CV
+              </a>
             </Button>
           </div>
         </div>
