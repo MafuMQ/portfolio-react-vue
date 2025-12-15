@@ -22,7 +22,7 @@ const images = {
   solarBE: new URL("../media/p_solarBE.jpg", import.meta.url).href,
   foodDonation: new URL("../media/p_foodDonation.jpg", import.meta.url).href,
   roi: new URL("../media/p_roi.jpg", import.meta.url).href,
-  opencv2pics: new URL("../media/p_opencv2pics.jpg", import.meta.url).href,
+  opencv2pics: new URL("../media/p_facial_recognition.jpg", import.meta.url).href,
   pythonChatApp: new URL("../media/p_ex1-python-chat-app.jpg", import.meta.url).href,
   jsChatApp: new URL("../media/p_ex1-js-chat-app.jpg", import.meta.url).href,
   tic_tac_toe: new URL("../media/p_tic-tac-toe.png", import.meta.url).href,
@@ -103,11 +103,11 @@ const allProjects = [
     title: "Facial Recognition",
     description: "A web application that uses facial recognition technology to compare 2 images and determine if they are of the same person, leveraging advanced machine learning algorithms.",
     image: images.opencv2pics,
-    tags: ["OpenCV", "Python"],
+    tags: ["OpenCV", "Python", "AI"],
     category: "AI/ML",
     year: "2023",
     github: "https://github.com/MafuMQ/Facial-Recognition",
-    demo: "https://github.com/MafuMQ/Facial-Recognition"
+    demo: "https://d21v4clbz3po4x.cloudfront.net/"
   },
   {
     id: 8,
@@ -124,11 +124,11 @@ const allProjects = [
     id: 9,
     title: "Facial Detection",
     description: "A web application that detects faces in images using OpenCV and Python, providing real-time facial detection and recognition capabilities.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
+    image: "---",
     tags: ["Python", "OpenCV", "AI"],
     category: "AI/ML",
     year: "2023",
-    github: "https://github.com/MafuMQ/Facial-Detection",
+    github: "...",
     demo: "https://facial-detection-ecru.vercel.app/"
   },
   {
