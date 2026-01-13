@@ -75,7 +75,7 @@ const allProjects = [
     category: "Full Stack",
     year: "2025",
     github: "https://github.com/MafuMQ/Calculators",
-    demo: "https:/https://calculators-xi-seven.vercel.app/"
+    demo: "https://calculators-xi-seven.vercel.app/"
   },
     {
     id: 5,
