@@ -19,6 +19,7 @@ const images = {
   instaGoods: new URL("../media/p_instaGoods.jpg", import.meta.url).href,
   cyberQuest: new URL("../media/p_cyberQuest.jpg", import.meta.url).href,
   LP: new URL("../media/p_LP.jpg", import.meta.url).href,
+  calculators: new URL("../media/p_calculators.jpg", import.meta.url).href,
   solarBE: new URL("../media/p_solarBE.jpg", import.meta.url).href,
   foodDonation: new URL("../media/p_foodDonation.jpg", import.meta.url).href,
   roi: new URL("../media/p_roi.jpg", import.meta.url).href,
@@ -67,6 +68,17 @@ const allProjects = [
   },
     {
     id: 4,
+    title: "Break-Even Calculators Suite",
+    description: "A collection of calculators that determine and visualize the break-even point for various scenarios, helping homeowners and businesses make informed financial decisions.",
+    image: images.calculators,
+    tags: ["Flask", "Numpy"],
+    category: "Full Stack",
+    year: "2025",
+    github: "https://github.com/MafuMQ/Calculators",
+    demo: "https:/https://calculators-xi-seven.vercel.app/"
+  },
+    {
+    id: 5,
     title: "Solar Break-Even Calculator",
     description: "Calculates the break-even point for solar panel installations, helping homeowners and businesses make informed decisions about investing in solar energy.",
     image: images.solarBE,
@@ -77,7 +89,7 @@ const allProjects = [
     demo: "https://solar-break-even.vercel.app/"
   },
     {
-    id: 5,
+    id: 6,
     title: "Food Donation Platform",
     description: "A platform for businesses to donate excess food to local charities, helping to reduce food waste and support those in need.",
     image: images.foodDonation,
@@ -88,7 +100,7 @@ const allProjects = [
     demo: "https://mafuqhama.pythonanywhere.com/"
   },
   {
-    id: 6,
+    id: 7,
     title: "Return on Investment/Break-Even Calculator",
     description: "A web application that calculates the break-even point for various business scenarios, helping entrepreneurs make informed financial decisions.",
     image: images.roi,
@@ -99,7 +111,7 @@ const allProjects = [
     demo: "https://breakeven-py-web.vercel.app/"
   },
   {
-    id: 7,
+    id: 8,
     title: "Facial Recognition",
     description: "A web application that uses facial recognition technology to compare 2 images and determine if they are of the same person, leveraging advanced machine learning algorithms.",
     image: images.opencv2pics,
@@ -110,7 +122,7 @@ const allProjects = [
     demo: "https://d21v4clbz3po4x.cloudfront.net/"
   },
   {
-    id: 8,
+    id: 9,
     title: "React Chat App with Authentication",
     description: "A full stack chat application built with React, Node.js, Next.js, and Firebase, featuring user authentication, real-time messaging, and a modern UI.",
     image: images.jsChatApp,
@@ -121,7 +133,7 @@ const allProjects = [
     demo: "https://ex1-js-chat-app.vercel.app/"
   },
   {
-    id: 9,
+    id: 10,
     title: "Facial Detection",
     description: "A web application that detects faces in images using OpenCV and Python, providing real-time facial detection and recognition capabilities.",
     image: "---",
@@ -132,7 +144,7 @@ const allProjects = [
     demo: "https://facial-detection-ecru.vercel.app/"
   },
   {
-    id: 10,
+    id: 11,
     title: "Group Chat App",
     description: "A group chat app that uses restful APIs to allow users to create chat rooms, send messages, and manage user accounts, built with Python.",
     image: images.pythonChatApp,
@@ -143,7 +155,7 @@ const allProjects = [
     demo: "https://ex1-python-chat-app.vercel.app/"
   },
   {
-    id: 11,
+    id: 12,
     title: "Tic-Tac-Toe",
     description: "A classic tic-tac-toe game built with HTML, CSS, and JavaScript, featuring a clean UI and responsive design. Play with a friend.",
     image: images.tic_tac_toe,
@@ -154,7 +166,7 @@ const allProjects = [
     demo: "https://tic-tac-toe-sigma-orcin-21.vercel.app/"
   },
   {
-    id: 12,
+    id: 13,
     title: "Label Creation & Visualizations",
     description: "Created Logo and it's visualization as a label for various products.",
     image: images.label,
@@ -165,7 +177,7 @@ const allProjects = [
     demo: "https://mafumbangeni.blogspot.com/2024/07/label-visualizations.html"
   },
   {
-    id: 13,
+    id: 14,
     title: "Apparel Visualizations",
     description: "Visualizations based on logo for apparel products, showcasing the logo in various styles and contexts.",
     image: images.apparel,
@@ -176,7 +188,7 @@ const allProjects = [
     demo: "https://mafumbangeni.blogspot.com/2024/07/apparel-visualizations-based-on-logo.html"
   },
   {
-    id: 14,
+    id: 15,
     title: "Graphical Art",
     description: "A collection of graphical art pieces created using various design tools, showcasing creativity and design skills.",
     image: images.art,
